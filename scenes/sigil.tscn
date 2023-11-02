@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpjhcj8c8pwx6"]
+
+[ext_resource type="Texture2D" uid="uid://x80xt5a8yvlx" path="res://assets/sprites/red_sigil.png" id="1_5ifcu"]
+[ext_resource type="Script" path="res://scripts/sigil.gd" id="1_n44jg"]
+
+[node name="Sigil" type="CharacterBody2D"]
+z_index = 4
+collision_layer = 3
+collision_mask = 2
+script = ExtResource("1_n44jg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("1_5ifcu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PackedVector2Array(-41, 21, -21, 2, -19, -45, 20, -45, 31, -10, -12, -1, -8, 48)

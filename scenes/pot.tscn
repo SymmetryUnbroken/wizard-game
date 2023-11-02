@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cur0mj2hts34f"]
+
+[ext_resource type="Script" path="res://scripts/pot.gd" id="1_khag4"]
+[ext_resource type="Texture2D" uid="uid://dbhe0oy42p1i0" path="res://assets/sprites/Pot.png" id="1_qngoo"]
+
+[node name="Pot" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_khag4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(2, 2)
+texture = ExtResource("1_qngoo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-18, -37, -2, -40, 17, -39, 32, -29, 39, -19, 39, 19, 27, 34, 4, 41, -18, 38, -33, 26, -40, 12, -41, -13, -29, -30)

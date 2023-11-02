@@ -1,0 +1,9 @@
+[gd_resource type="FontFile" load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/OptimusPrinceps.ttf" type="FontFile" id=1]
+[ext_resource path="res://assets/fonts/OldStandardTT-Regular.ttf" type="FontFile" id=2]
+
+[resource]
+size = 40
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )

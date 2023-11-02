@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjdc1nhf02fhw"]
+
+[ext_resource type="Script" path="res://scripts/permeable_component.gd" id="1_mjx40"]
+
+[node name="PermeableComponent" type="Node2D"]
+script = ExtResource("1_mjx40")
