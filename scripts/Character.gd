@@ -21,7 +21,7 @@ var carried
 var pos_on_carry_start
 
 func init_reality(reality_input):
-	reality = reality_input
+	reality = reality_input 
 	
 func _ready():
 	add_to_group('creatures')
