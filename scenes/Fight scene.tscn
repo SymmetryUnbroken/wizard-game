@@ -140,6 +140,7 @@ rotation = -1.5708
 script = ExtResource("3")
 
 [node name="Direction" type="Sprite2D" parent="Map/Character"]
+visible = false
 z_index = 4
 position = Vector2(0, -5)
 rotation = 1.5708
