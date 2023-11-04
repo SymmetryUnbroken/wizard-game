@@ -6,6 +6,6 @@ var open = false
 func interact(_other):
 	if open:
 		rotation += PI/2
-	else:
+	else: 
 		rotation -= PI/2
 	open = not open
