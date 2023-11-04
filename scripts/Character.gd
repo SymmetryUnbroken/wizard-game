@@ -40,8 +40,8 @@ func _ready():
 
 
 func _set_velocity(delta):
-	var velocity_unrotated = Vector2(0, Input.get_axis("move_forward", "move_back"))
-	angle_velocity = Input.get_axis("move_left", "move_right")
+	var velocity_unrotated = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_forward", "move_back"))
+	angle_velocity = 0#Input.get_axis("move_left", "move_right")
 	var velocity_slide_unrotated = 0.5 * Input.get_axis("slide_left", "slide_right")
 	#ang_vel_camera = Input.get_axis("camera_left", "camera_right")
 	var velocity_slide = Vector2(velocity_slide_unrotated, 0).rotated(rotation + PI/2)
@@ -49,7 +49,7 @@ func _set_velocity(delta):
 	if _velocity.length() > 0.01:
 		$Direction.rotation = _velocity.angle() - rotation + PI/2
 		$CameraHolder.rotation = fmod($CameraHolder.rotation, 2*PI)
-		var diff = fmod(velocity_unrotated.angle() + $CameraHolder.rotation + 5*PI, 2*PI) - PI
+		var diff = $Direction.rotation#fmod(velocity_unrotated.angle() + $CameraHolder.rotation + 5*PI, 2*PI) - PI
 		#angle_velocity = 10*diff
 		ang_vel_camera += velocity_unrotated.x*camera_turn_damping
 	else:
