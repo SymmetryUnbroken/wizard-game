@@ -25,7 +25,7 @@ func init_reality(reality_input):
 	
 func _ready():
 	add_to_group('creatures')
-	$CameraHolder/Camera2D.position = Vector2(0, -320)
+	#$CameraHolder/Camera2D.position = Vector2(0, -320)
 	if gvars.spear:
 		weapon = gvars.spear.duplicate()
 		weapon.name = "Halberd"
@@ -43,7 +43,7 @@ func _set_velocity(delta):
 	var velocity_unrotated = Vector2(0, Input.get_axis("move_forward", "move_back"))
 	angle_velocity = Input.get_axis("move_left", "move_right")
 	var velocity_slide_unrotated = 0.5 * Input.get_axis("slide_left", "slide_right")
-	ang_vel_camera = Input.get_axis("camera_left", "camera_right")
+	#ang_vel_camera = Input.get_axis("camera_left", "camera_right")
 	var velocity_slide = Vector2(velocity_slide_unrotated, 0).rotated(rotation + PI/2)
 	_velocity = velocity_unrotated.rotated(rotation + $CameraHolder.rotation)
 	if _velocity.length() > 0.01:

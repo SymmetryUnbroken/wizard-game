@@ -1,23 +1,11 @@
 res://default_env.tres
 res://scenes/Fight scene.tscn
-res://scenes/Fountain.tscn
-res://scenes/Fighting Entity.tscn
 res://scenes/pot.tscn
 res://scenes/door.tscn
 res://scenes/chained_component.tscn
 res://scenes/Spirit.tscn
 res://scenes/key.tscn
-res://scripts/key.gd
-res://scripts/Character.gd
-res://scripts/Map.gd
-res://scenes/door.gd
-res://scripts/lock.gd
-res://scripts/SmallComponent.gd
-res://scenes/sigil.tscn
-res://scripts/sigil.gd
 res://scenes/small_component.tscn
-res://scripts/Wall.gd
+res://scenes/sigil.tscn
 res://scenes/permeable_component.tscn
-res://scripts/permeable_component.gd
-res://scripts/globals.gd
-res://scripts/spell_name.gd
+res://scripts/Character.gd

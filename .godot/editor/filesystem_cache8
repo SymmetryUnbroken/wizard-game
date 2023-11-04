@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698859221
-default_env.tres::Environment::763559155764128162::1698859253::0::1::::<><>::
+::res://::1699112140
+default_env.tres::Environment::763559155764128162::1698874106::0::1::::<><>::
 ::res://assets/::1692222681
 theme.tres::Theme::-1::1690283244::0::1::::<><>::res://assets/fonts/MyFont.tres
 ::res://assets/fonts/::1690283250
@@ -26,26 +26,33 @@ red_sigil.png::CompressedTexture2D::1684027911970543921::1691269555::1691269624:
 Spear_AI.png::CompressedTexture2D::6143931572879322876::1664462238::1690283252::1::::<><>::
 spear_shaft.png::CompressedTexture2D::1014163576184355576::1664724168::1690283250::1::::<><>::
 spear_tip.png::CompressedTexture2D::5631310425342448132::1664724184::1690283250::1::::<><>::
-::res://scenes/::1698859221
-Fight scene.tscn::PackedScene::1197582529753348771::1698859220::0::1::::<><>::uid://dm4fjiouvhj4r::::res://scenes/Fighting Entity.tscn<>res://scripts/Map.gd<>uid://bjhltkq10e842::::res://assets/sprites/floor_tile.png<>res://scripts/Character.gd<>uid://lvrerx4rrymi::::res://assets/sprites/icon.png<>uid://bn2umvpigvfow::::res://assets/sprites/gras.png<>uid://bepmfq6rk6i6i::::res://assets/sprites/halberd.png<>res://assets/theme.tres<>uid://timpal7s4r8q::::res://scenes/Fountain.tscn<>uid://bail4csw1emu1::::res://scenes/Spirit.tscn<>uid://bjq6n01ki4gch::::res://assets/sounds/s1.1.wav<>uid://cur0mj2hts34f::::res://scenes/pot.tscn<>uid://b0fj1idiotx0n::::res://scenes/door.tscn<>uid://c5vjiiuqf0i2x::::res://scenes/key.tscn
-Fighting Entity.tscn::PackedScene::8061715229463522711::1698859221::0::1::::<><>::uid://b1k7pmqo2td5c::::res://assets/sprites/character.png<>res://scripts/Hand.gd
-Fountain.tscn::PackedScene::1350858460448861310::1698859221::0::1::::<><>::uid://x756f7werdcx::::res://assets/sprites/Fountain.png
-pot.tscn::PackedScene::6213252531075936047::1698859221::0::1::::<><>::res://scripts/pot.gd<>uid://dbhe0oy42p1i0::::res://assets/sprites/Pot.png
-door.tscn::PackedScene::4152056972194815731::1698859253::0::1::::<><>::res://scenes/door.gd<>uid://dxrpaj6w7f2vu::::res://scenes/chained_component.tscn
-chained_component.tscn::PackedScene::8809611153106219890::1698859221::0::1::::<><>::uid://bkuq66o7yivd5::::res://assets/sprites/lock.png
-key.tscn::PackedScene::6922419800466096997::1698859221::0::1::::<><>::res://scripts/key.gd<>uid://yi18v1fgcgk3::::res://assets/sprites/key.png
-door.gd::GDScript::-1::1698857314::0::1::::<>AnimatableBody2D<>::
-sigil.tscn::PackedScene::8231103219797784717::1693319576::0::1::::<><>::uid://x80xt5a8yvlx::::res://assets/sprites/red_sigil.png<>res://scripts/sigil.gd
-Spirit.tscn::PackedScene::2403655514556927986::1698859221::0::1::::<><>::uid://bjhltkq10e842::::res://assets/sprites/floor_tile.png
+::res://scenes/::1698874106
+chained_component.tscn::PackedScene::8809611153106219890::1698874105::0::1::::<><>::res://scripts/lock.gd<>uid://bkuq66o7yivd5::::res://assets/sprites/lock.png
+door.tscn::PackedScene::4152056972194815731::1698874105::0::1::::<><>::res://scripts/door.gd<>uid://dxrpaj6w7f2vu::::res://scenes/chained_component.tscn
+Fight scene.tscn::PackedScene::1197582529753348771::1698874105::0::1::::<><>::uid://dm4fjiouvhj4r::::res://scenes/Fighting Entity.tscn<>res://scripts/Map.gd<>uid://bjhltkq10e842::::res://assets/sprites/floor_tile.png<>res://scripts/Character.gd<>uid://lvrerx4rrymi::::res://assets/sprites/icon.png<>uid://bn2umvpigvfow::::res://assets/sprites/gras.png<>res://scripts/Wall.gd<>uid://bepmfq6rk6i6i::::res://assets/sprites/halberd.png<>res://assets/theme.tres<>uid://timpal7s4r8q::::res://scenes/Fountain.tscn<>uid://bail4csw1emu1::::res://scenes/Spirit.tscn<>uid://bjq6n01ki4gch::::res://assets/sounds/s1.1.wav<>uid://cur0mj2hts34f::::res://scenes/pot.tscn<>uid://b0fj1idiotx0n::::res://scenes/door.tscn<>uid://c5vjiiuqf0i2x::::res://scenes/key.tscn<>uid://820pu1oag7cq::::res://assets/fonts/OptimusPrinceps.ttf<>res://scripts/spell_name.gd
+Fighting Entity.tscn::PackedScene::8061715229463522711::1698865609::0::1::::<><>::uid://b1k7pmqo2td5c::::res://assets/sprites/character.png<>res://scripts/Hand.gd
+Fountain.tscn::PackedScene::1350858460448861310::1698865609::0::1::::<><>::uid://x756f7werdcx::::res://assets/sprites/Fountain.png
+key.tscn::PackedScene::6922419800466096997::1698874105::0::1::::<><>::res://scripts/key.gd<>uid://yi18v1fgcgk3::::res://assets/sprites/key.png
+permeable_component.tscn::PackedScene::5410902651896568672::1698874106::0::1::::<><>::res://scripts/permeable_component.gd
+pot.tscn::PackedScene::6213252531075936047::1698874105::0::1::::<><>::res://scripts/pot.gd<>uid://dbhe0oy42p1i0::::res://assets/sprites/Pot.png
+sigil.tscn::PackedScene::8231103219797784717::1698874106::0::1::::<><>::uid://x80xt5a8yvlx::::res://assets/sprites/red_sigil.png<>res://scripts/sigil.gd
+small_component.tscn::PackedScene::781597006607453865::1698874105::0::1::::<><>::res://scripts/SmallComponent.gd
+Spirit.tscn::PackedScene::2403655514556927986::1698874105::0::1::::<><>::uid://bjhltkq10e842::::res://assets/sprites/floor_tile.png
 ::res://scenes/HUD/::1690282688
 button.tscn::PackedScene::-1::1690283244::0::1::::<><>::res://assets/theme.tres
 label.tscn::PackedScene::-1::1690283244::0::1::::<><>::res://assets/theme.tres
-::res://scripts/::1698859220
-Character.gd::GDScript::-1::1698857541::0::1::::<>CharacterBody2D<>::
-globals.gd::GDScript::-1::1690285501::0::1::::<>Control<>::
+::res://scripts/::1698867919
+Character.gd::GDScript::-1::1698867126::0::1::::<>CharacterBody2D<>::
+door.gd::GDScript::-1::1698857314::0::1::::<>AnimatableBody2D<>::
+globals.gd::GDScript::-1::1698867357::0::1::::<>Control<>::
 Halberd.gd::GDScript::-1::1693321641::0::1::::<>CharacterBody2D<>::
 Hand.gd::GDScript::-1::1690286038::0::1::::<>Node2D<>::
-Map.gd::GDScript::-1::1698854593::0::1::::<>Node2D<>::
+key.gd::GDScript::-1::1698859502::0::1::::Key<>RigidBody2D<>::
+lock.gd::GDScript::-1::1698859751::0::1::::<>Node2D<>::
+Map.gd::GDScript::-1::1698866599::0::1::::<>Node2D<>::
+permeable_component.gd::GDScript::-1::1698866780::0::1::::<>Node2D<>::
 pot.gd::GDScript::-1::1693316637::0::1::::<>RigidBody2D<>::
-key.gd::GDScript::-1::1698859253::0::1::::Key<>RigidBody2D<>::
-sigil.gd::GDScript::-1::1691353953::0::1::::<>CharacterBody2D<>::
+sigil.gd::GDScript::-1::1698866798::0::1::::<>CharacterBody2D<>::
+SmallComponent.gd::GDScript::-1::1698862182::0::1::::<>Node2D<>::
+spell_name.gd::GDScript::-1::1698867918::0::1::::<>RichTextLabel<>::
+Wall.gd::GDScript::-1::1698862273::0::1::::<>StaticBody2D<>::
