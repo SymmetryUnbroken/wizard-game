@@ -36,32 +36,6 @@ func _ready():
 		weapon.add_collision_exception_with(self)
 	else:
 		weapon = null
-
-
-
-func _set_velocity(delta):
-	var velocity_unrotated = Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_forward", "move_back"))
-	angle_velocity = 0#Input.get_axis("move_left", "move_right")
-	var velocity_slide_unrotated = 0.5 * Input.get_axis("slide_left", "slide_right")
-	#ang_vel_camera = Input.get_axis("camera_left", "camera_right")
-	var velocity_slide = Vector2(velocity_slide_unrotated, 0).rotated(rotation + PI/2)
-	_velocity = velocity_unrotated#.rotated(rotation + PI/2)
-	if _velocity.length() > 0.01:
-		$Direction.rotation = _velocity.angle() - rotation + PI/2
-		$CameraHolder.rotation = fmod($CameraHolder.rotation, 2*PI)
-		var diff = fmod($Direction.rotation + 5*PI/2, 2*PI) - PI
-		angle_velocity = 10*diff
-		ang_vel_camera += velocity_unrotated.x*camera_turn_damping
-	else:
-		pass#angle_velocity = 0
-	_velocity += velocity_slide
-	#if Input.is_key_pressed(KEY_SHIFT):
-	#	_velocity *= 0.1
-	#	angle_velocity *= 0.1
-	if Input.is_key_pressed(KEY_SHIFT): 
-		#_velocity *= 10
-		angle_velocity *= 5
-	_velocity *= CHARACTER_VELOCITY
 	
 var swing_held = false
 
@@ -135,26 +109,6 @@ func _input(event):
 			if is_instance_valid(target):
 				lock_on = true
 
-func _set_position(delta):
-	#$CameraHolder.rotation += delta * ang_vel_camera
-	rotation += delta * angle_velocity
-	if move_and_collide(Vector2()):
-		rotation -= delta * angle_velocity
-	if is_instance_valid(weapon) and weapon.move_and_collide(Vector2()):
-		rotation -= delta * angle_velocity
-	else:
-		last_collision = move_and_collide(delta * _velocity)
-		if is_instance_valid(weapon):
-			weapon.move_and_collide(Vector2())
-		#$CameraHolder.rotation += ang_vel_camera * delta
-		#$CameraHolder.rotation -= delta * angle_velocity
-	if lock_on:
-		if is_instance_valid(target):
-			rotation = (target.position - position).angle()
-			$CameraHolder.rotation = PI/2
-		else:
-			lock_on = false
-	$CameraHolder.rotation = PI/2
 
 func destroy_carried():
 	if carried:
@@ -173,6 +127,6 @@ func process_special_collisions():
 		last_collision = null
 
 func _physics_process(delta):
-	_set_velocity(delta)
-	_set_position(delta)
+	#_set_velocity(delta)
+	#_set_position(delta)
 	process_special_collisions()

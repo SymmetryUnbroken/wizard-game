@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://rceak0mvsewh"]
+[gd_scene load_steps=23 format=3 uid="uid://rceak0mvsewh"]
 
 [ext_resource type="PackedScene" uid="uid://dm4fjiouvhj4r" path="res://scenes/Fighting Entity.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/Map.gd" id="1_qgcne"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cur0mj2hts34f" path="res://scenes/pot.tscn" id="11_vtpu7"]
 [ext_resource type="PackedScene" uid="uid://b0fj1idiotx0n" path="res://scenes/door.tscn" id="12_j6w6k"]
 [ext_resource type="PackedScene" uid="uid://c5vjiiuqf0i2x" path="res://scenes/key.tscn" id="14_5kb57"]
+[ext_resource type="PackedScene" uid="uid://du5kdtohywli3" path="res://scenes/components/player_controlled_behaviour_component.tscn" id="14_vh7ki"]
 [ext_resource type="FontFile" uid="uid://820pu1oag7cq" path="res://assets/fonts/OptimusPrinceps.ttf" id="16_2t135"]
 [ext_resource type="Script" path="res://scripts/spell_name.gd" id="17_5neuk"]
 
@@ -162,6 +163,8 @@ drag_bottom_margin = 0.5
 [node name="Sprite2" type="Sprite2D" parent="Map/Character/CameraHolder"]
 visible = false
 texture = ExtResource("4")
+
+[node name="PlayerControlledBehaviourComponent" parent="Map/Character" instance=ExtResource("14_vh7ki")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Map"]
 stream = ExtResource("11_g7ath")
