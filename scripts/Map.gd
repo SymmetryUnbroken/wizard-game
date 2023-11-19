@@ -20,13 +20,13 @@ signal gameover
 	
 func _ready():
 	character = $Character
-	character.init_reality(self)
+	#character.init_reality(self)
 	$CanvasLayer/Gameover.get_ok_button().text = 'Restart'
 	$CanvasLayer/Gameover.get_cancel_button().text = 'Exit'
 	#$CanvasLayer/Gameover.get_close_button().visible = false
 	$CanvasLayer/Gameover.get_ok_button().connect("pressed", Callable(self, "_on_restart"))
 	$CanvasLayer/Gameover.get_cancel_button().connect("pressed", Callable(self, "_on_exit"))
-	$Character.connect("gameover", Callable(self, "_on_gameover"))
+	#$Character.connect("gameover", Callable(self, "_on_gameover"))
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 #	for enemy in get_tree().get_nodes_in_group("enemies"):
 #		enemy.target = $Character
