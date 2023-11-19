@@ -1,7 +1,8 @@
-extends Node2D
+extends Component
 
 func _ready():
-	await get_parent().ready
+	if not get_parent():
+		await get_parent().ready
 	if get_parent() and "interactable" in get_parent():
 		get_parent().interactable = false
 

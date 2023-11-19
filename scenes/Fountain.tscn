@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://x756f7werdcx" path="res://assets/sprites/Fountain.png" id="1_mfe11"]
 
-[node name="Fountain" type="StaticBody2D"]
+[node name="Fountain" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 4.76837e-07)

@@ -140,21 +140,4 @@ func _input(event):
 #				lock_on = true
 #
 #
-#func destroy_carried():
-#	if carried:
-#		carried.queue_free()
-#		carried = null
-#		$CollisionPolygon2D.queue_free()
-#		$Sprite2D.queue_free()
-#
-#func process_special_collisions():
-#	if last_collision:
-#		if carried is Key:
-#			var lock = last_collision.get_collider().get_node_or_null("ChainedComponent")
-#			if lock:
-#				lock.queue_free()
-#				destroy_carried()
-#		last_collision = null
-#
-#func _physics_process(delta):
-#	process_special_collisions()
+

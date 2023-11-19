@@ -38,8 +38,25 @@ func _set_position(delta):
 	if lock_on:
 		if is_instance_valid(target):
 			rotation = (target.position - position).angle()
-	
+
+func destroy_carried():
+	if parent.carried:
+		parent.carried.queue_free()
+		parent.carried = null
+		parent.get_node("CollisionPolygon2D").queue_free()
+		parent.get_node("Sprite2D").queue_free()
+#
+func process_special_collisions():
+	if last_collision:
+		if parent.carried is Key:
+			var lock = last_collision.get_collider().get_node_or_null("ChainedComponent")
+			if lock:
+				lock.queue_free()
+				destroy_carried()
+		last_collision = null
+		
 func _physics_process(delta):
 	if parent:
 		_set_velocity(delta)
 		_set_position(delta)
+		process_special_collisions()

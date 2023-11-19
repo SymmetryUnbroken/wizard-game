@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0fj1idiotx0n"]
+[gd_scene load_steps=3 format=3 uid="uid://b0fj1idiotx0n"]
 
 [ext_resource type="Script" path="res://scripts/door.gd" id="1_ovktp"]
+[ext_resource type="PackedScene" uid="uid://dxrpaj6w7f2vu" path="res://scenes/chained_component.tscn" id="2_hvrkt"]
 
 [node name="Door" type="CharacterBody2D"]
 script = ExtResource("1_ovktp")
@@ -11,3 +12,5 @@ polygon = PackedVector2Array(-16, 13, -16, -14, 356, -14, 356, 14)
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.32549, 0.172549, 0.0156863, 1)
 polygon = PackedVector2Array(-17, 13, -17, -14, 356, -14, 356, 14)
+
+[node name="ChainedComponent" parent="." instance=ExtResource("2_hvrkt")]

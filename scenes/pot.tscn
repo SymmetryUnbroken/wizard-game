@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/pot.gd" id="1_khag4"]
 [ext_resource type="Texture2D" uid="uid://dbhe0oy42p1i0" path="res://assets/sprites/Pot.png" id="1_qngoo"]
 
-[node name="Pot" type="RigidBody2D"]
+[node name="Pot" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_khag4")

@@ -1,3 +1,3 @@
-extends RigidBody2D
+extends Entity
 
 var pickable = true
