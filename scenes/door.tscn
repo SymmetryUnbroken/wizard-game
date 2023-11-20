@@ -14,3 +14,4 @@ color = Color(0.32549, 0.172549, 0.0156863, 1)
 polygon = PackedVector2Array(-17, 13, -17, -14, 356, -14, 356, 14)
 
 [node name="ChainedComponent" parent="." instance=ExtResource("2_hvrkt")]
+position = Vector2(167, 0)

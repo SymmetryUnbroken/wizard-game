@@ -14,12 +14,15 @@ func register_child(x):
 		behaviour_component = x
 	elif x is AbstractChainedComponent:
 		chained_component = x
-		
-func set_component(component):
-	if component is AbstractBehaviourComponent:
+
+func delete_equivalent_component(x):
+	if x is AbstractBehaviourComponent:
 		behaviour_component.queue_free()
-	elif component is AbstractChainedComponent:
+	elif x is AbstractChainedComponent:
 		chained_component.queue_free()
+
+func set_component(component):
+	delete_equivalent_component(component)
 	add_child(component)
 	register_child(component)
 	
