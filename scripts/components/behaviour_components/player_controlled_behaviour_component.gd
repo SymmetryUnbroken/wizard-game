@@ -1,4 +1,4 @@
-extends BehaviourComponent
+extends AbstractBehaviourComponent
 
 var CHARACTER_SPEED = 800
 var angle_velocity
@@ -48,12 +48,14 @@ func destroy_carried():
 #
 func process_special_collisions():
 	if last_collision:
-		if parent.carried is Key:
-			var lock = last_collision.get_collider().get_node_or_null("ChainedComponent")
-			if lock:
-				lock.queue_free()
-				destroy_carried()
-		last_collision = null
+		if parent.carried and "use_as_tool" in parent.carried:
+			parent.carried.use_as_tool(parent, last_collision.get_collider())
+#		if parent.carried is Key:
+#			var lock = last_collision.get_collider().get_node_or_null("ChainedComponent")
+#			if lock:
+#				lock.queue_free()
+#				destroy_carried()
+#		last_collision = null
 		
 func _physics_process(delta):
 	if parent:

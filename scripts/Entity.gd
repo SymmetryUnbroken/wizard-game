@@ -1,6 +1,25 @@
 extends CharacterBody2D
 class_name Entity
 
-var behaviour_component: BehaviourComponent
+var behaviour_component: AbstractBehaviourComponent
+var chained_component: AbstractChainedComponent
+
+func _ready():
+	for child in get_children():
+		if child is Component:
+			register_child(child)
+			
+func register_child(x):
+	if x is AbstractBehaviourComponent:
+		behaviour_component = x
+	elif x is AbstractChainedComponent:
+		chained_component = x
+		
 func set_component(component):
-	pass
+	if component is AbstractBehaviourComponent:
+		behaviour_component.queue_free()
+	elif component is AbstractChainedComponent:
+		chained_component.queue_free()
+	add_child(component)
+	register_child(component)
+	

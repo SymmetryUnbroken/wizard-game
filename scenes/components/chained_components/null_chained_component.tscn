@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca1g1k8l2w6lh"]
+
+[ext_resource type="Script" path="res://scripts/components/chained_components/null_chained_component.gd" id="1_o8uhq"]
+
+[node name="NullChainedComponent" type="Node2D"]
+script = ExtResource("1_o8uhq")

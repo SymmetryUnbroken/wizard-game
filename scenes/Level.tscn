@@ -103,7 +103,7 @@ position = Vector2(-579, 1592)
 scale = Vector2(1.1, 1.1)
 
 [node name="Fountain2" parent="Map" instance=ExtResource("4_sjdkx")]
-position = Vector2(106, 1645)
+position = Vector2(661, 2302)
 scale = Vector2(1.1, 1.1)
 
 [node name="Fountain3" parent="Map" instance=ExtResource("4_sjdkx")]
@@ -131,7 +131,7 @@ collision_mask = 3
 stream = ExtResource("9_qk83e")
 
 [node name="Key" parent="Map" instance=ExtResource("10_b2shh")]
-position = Vector2(-229, 2057)
+position = Vector2(99, 781)
 collision_layer = 3
 collision_mask = 3
 
