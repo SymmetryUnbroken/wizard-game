@@ -16,7 +16,7 @@ func interact():
 		var sprite = get_node("Sprite2D")
 		polygon.reparent(carried)
 		sprite.reparent(carried)
-		carried.position += polygon.position
+		carried.position += polygon.position * carried.scale
 		sprite.position -= polygon.position
 		polygon.position = Vector2()
 

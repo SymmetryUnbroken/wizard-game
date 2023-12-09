@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvtmqw2uckxij"]
+
+[ext_resource type="Script" path="res://scripts/components/size_components/size_component.gd" id="1_e56t6"]
+
+[node name="AbstractSizeComponent" type="Node2D"]
+script = ExtResource("1_e56t6")

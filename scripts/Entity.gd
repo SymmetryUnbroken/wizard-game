@@ -3,6 +3,7 @@ class_name Entity
 
 var behaviour_component: AbstractBehaviourComponent
 var chained_component: AbstractChainedComponent
+var size_component: AbstractSizeComponent
 
 func _ready():
 	for child in get_children():
@@ -14,15 +15,20 @@ func register_child(x):
 		behaviour_component = x
 	elif x is AbstractChainedComponent:
 		chained_component = x
+	elif x is AbstractSizeComponent:
+		size_component = x
 
 func delete_equivalent_component(x):
 	if x is AbstractBehaviourComponent:
 		behaviour_component.queue_free()
 	elif x is AbstractChainedComponent:
 		chained_component.queue_free()
+	elif x is AbstractSizeComponent:
+		size_component.queue_free()
 
 func set_component(component):
 	delete_equivalent_component(component)
 	add_child(component)
 	register_child(component)
 	
+var pickable = false

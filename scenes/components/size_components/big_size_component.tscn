@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpc3mk0goob7m"]
+
+[ext_resource type="Script" path="res://scripts/components/size_components/big_size_component.gd" id="1_2k2ye"]
+
+[node name="BigSizeComponent" type="Node2D"]
+script = ExtResource("1_2k2ye")

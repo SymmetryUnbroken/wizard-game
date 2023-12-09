@@ -1,7 +1,6 @@
 extends Entity
 
 class_name Key
-var pickable = true
 var unlocked_scene = preload("res://scenes/components/chained_components/null_chained_component.tscn")
 
 func use_as_tool(user, used_on):
